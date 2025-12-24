@@ -1,0 +1,89 @@
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: #f4f6f8;
+  padding: 40px;
+  color: #333;
+}
+
+.title {
+  text-align: center;
+  color: lightskyblue;
+  margin-bottom: 30px;
+}
+
+
+.post-form {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.post-form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.post-form input[type="submit"] {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: lightskyblue;
+  color: white;
+  cursor: pointer;
+}
+
+
+.post {
+  max-width: 500px;
+  background: white;
+  margin: 0 auto 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.post p {
+  margin-bottom: 10px;
+}
+
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions form {
+  display: flex;
+  gap: 5px;
+}
+
+.actions input[type="text"] {
+  padding: 6px;
+  font-size: 12px;
+}
+
+.actions .delete {
+  background: #ef4444;
+  color: white;
+}
+
+.actions .edit {
+  background: #10b981;
+  color: white;
+}
+
+.actions input[type="submit"] {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-size: small;
+}

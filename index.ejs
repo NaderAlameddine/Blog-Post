@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Project</title>
+    <link href="/styles/index.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %>
+
+    <h1 class="title">My Posts</h1>
+
+
+    <form action="/create" method="post" class="post-form">
+      <input
+        type="text"
+        name="message"
+        placeholder="Write something..."
+        required
+      />
+      <input type="submit" value="Save" />
+    </form>
+
+
+    <% for (let i = 0; i < posts.length; i++) { %>
+    <div class="post">
+      <p><%= posts[i].message %></p>
+
+      <div class="actions">
+     
+        <form action="/delete" method="post">
+          <input type="hidden" name="id" value="<%= posts[i].id %>" />
+          <input type="submit" value="Delete" class="delete" />
+        </form>
+
+       
+        <form action="/edit" method="post">
+          <input type="hidden" name="id" value="<%= posts[i].id %>" />
+          <input
+            type="text"
+            name="newMessage"
+            value="<%= posts[i].message %>"
+            required
+          />
+          <input type="submit" value="Edit" class="edit" />
+        </form>
+      </div>
+    </div>
+    <% } %> <%- include("partials/footer.ejs") %>
+  </body>
+</html>
